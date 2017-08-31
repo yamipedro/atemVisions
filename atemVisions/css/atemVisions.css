@@ -1,0 +1,114 @@
+.atemBgColor_white{background: #F2F2F2;}
+.atemBgColor_blue{background: #00b7ff;}
+.atemBgColor_green{background: #00bd33;}
+.atemBgColor_yellow{background: #FFF100;}
+.atemBgColor_red{background: #FF2E2E;}
+.atemBgColor_black{background: #202020;}
+.atemBgColor_purple{background: #8500C9;}
+.atemBgColor_orange{background: #FF9300;}
+.atemColor_white{color: #F2F2F2;}
+.atemColor_blue{color: #00b7ff;}
+.atemColor_green{color: #00bd33;}
+.atemColor_yellow{color: #FFF100;}
+.atemColor_red{color: #FF2E2E;}
+.atemColor_black{color: #202020;}
+.atemColor_purple{color: #8500C9;}
+.atemColor_orange{color: #FF9300;}
+.atemBorder_white{border: 1px solid #F2F2F2;}
+.atemBorder_blue{border: 1px solid #00b7ff;}
+.atemBorder_green{border: 1px solid #00bd33;}
+.atemBorder_yellow{border: 1px solid #FFF100;}
+.atemBorder_red{border: 1px solid #FF2E2E;}
+.atemBorder_black{border: 1px solid #202020;}
+.atemBorder_purple{border: 1px solid #8500C9;}
+.atemBorder_orange{border: 1px solid #FF9300;}
+
+.atemSquare {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+}
+
+.atemButton {
+    background: #FFFFFF;
+    padding: 5px 15px;
+    border: 1px solid #696969;
+    cursor: pointer;
+}
+
+.atemButton:hover {
+    background: #F9F9F9;
+}
+
+.atemButton:active {
+    background: #F5F5F5;
+}
+
+.atemButton:focus,.atemButton:active {
+    outline: none !important;
+    border: 1px solid #3E3E3E;
+ }
+
+.atemButton_white{background: #F2F2F2;color: #696969;}
+.atemButton_white:hover{background: #E4E4E4;}
+.atemButton_white:active{background: #D0D0D0;}
+.atemButton_blue{background: #00b7ff;color: #F2F2F2;}
+.atemButton_blue:hover{background: #0097D3;}
+.atemButton_blue:active{background: #00719E;}
+.atemButton_green{background: #00bd33;color: #F2F2F2;}
+.atemButton_green:hover{background: #009D2A;}
+.atemButton_green:active{background: #00691C;}
+.atemButton_yellow{background: #FFF100;color: #696969;}
+.atemButton_yellow:hover{background: #EBDD00;}
+.atemButton_yellow:active{background: #C3B900;}
+.atemButton_red{background: #FF2E2E;color: #F2F2F2;}
+.atemButton_red:hover{background: #E81919;}
+.atemButton_red:active{background: #CB0B0B;}
+.atemButton_black{background: #202020;color: #F2F2F2;}
+.atemButton_black:hover{background: #4A4A4A;}
+.atemButton_black:active{background: #7A7A7A;}
+.atemButton_purple{background: #8500C9;color: #F2F2F2;}
+.atemButton_purple:hover{background: #7100AC;}
+.atemButton_purple:active{background: #580084;}
+.atemButton_orange{background: #FF9300;color: #F2F2F2;}
+.atemButton_orange:hover{background: #E68300;}
+.atemButton_orange:active{background: #D57900;}
+
+#atemModal_modal {
+    margin: auto;
+    margin-top: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: max-content;
+    visibility: hidden;
+    display: none;
+    background: #ffffff;
+    border-radius: 5px;
+    max-width: 90%;
+}
+
+#atemModal_title {
+    background: red;
+    padding: 5px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#atemModal_buttons {
+    padding: 10px;
+	text-align: center;
+}
+
+#atemModal_content {
+    padding: 10px;
+}
+
+.atemButton {
+    margin: 0px 2px;
+}
