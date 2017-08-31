@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script src="assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/atemVisions.css">
+    <script src="assets/js/atemVisions.js"></script>
+</head>
+<body class="atemBgColor_white">
+
+    <div class="atemBorder_black" style="background: white; text-align: center; border-radius: 10px; padding: 0px 50px 50px 50px; width: max-content; max-width: 90%;; margin: auto;">
+        <h1>Atem Visions</h1>
+
+        <h2>Colors</h2>
+        <div class="atemBgColor_white atemSquare"></div>
+        <div class="atemBgColor_blue atemSquare"></div>
+        <div class="atemBgColor_green atemSquare"></div>
+        <div class="atemBgColor_yellow atemSquare"></div>
+        <div class="atemBgColor_red atemSquare"></div>
+        <div class="atemBgColor_black atemSquare"></div>
+        <div class="atemBgColor_purple atemSquare"></div>
+        <div class="atemBgColor_orange atemSquare"></div>
+
+        <h2>Buttons & Modal</h2>
+        <button style="margin: 5px;" class="atemButton atemButton_white" onclick="show_modal('white', 'Modal white')">Modal white</button>
+        <button style="margin: 5px;" class="atemButton atemButton_blue" onclick="show_modal('blue', 'Modal blue')">Modal blue</button>
+        <button style="margin: 5px;" class="atemButton atemButton_green" onclick="show_modal('green', 'Modal green')">Modal green</button>
+        <button style="margin: 5px;" class="atemButton atemButton_yellow" onclick="show_modal('yellow', 'Modal yellow')">Modal yellow</button>
+        <button style="margin: 5px;" class="atemButton atemButton_red" onclick="show_modal('red', 'Modal red')">Modal red</button>
+        <button style="margin: 5px;" class="atemButton atemButton_black" onclick="show_modal('black', 'Modal black')">Modal black</button>
+        <button style="margin: 5px;" class="atemButton atemButton_purple" onclick="show_modal('purple', 'Modal purple')">Modal purple</button>
+        <button style="margin: 5px;" class="atemButton atemButton_orange" onclick="show_modal('orange', 'Modal orange')">Modal orange</button>
+    </div>
+
+    <script>
+        var texts = {
+            white : 'Conteúdo Modal white',
+            blue : 'Conteúdo Modal blue',
+            green : 'Conteúdo Modal green',
+            yellow : 'Conteúdo Modal yellow',
+            red : 'Conteúdo Modal red',
+            black : 'Conteúdo Modal black',
+            purple : 'Conteúdo Modal purple',
+            orange : 'Conteúdo Modal orange',
+        }
+        $(document).ready(function (){
+            $.get('https://baconipsum.com/api/?type=meat-and-filler&paras='+Object.keys(texts).length, function(lorem){ 
+                lorem.forEach(function(l, i) {
+                    texts[Object.keys(texts)[i]] = l;
+                });
+            });
+        });
+        function show_modal(type, title) {
+            atemModal.setTheme('atemModal_'+type);
+            atemModal.modal(title, texts[type], [
+                {
+                    text: 'Voltar',
+                    type: type,
+                    onclick: function() { atemModal.closeModal() }
+                }
+            ], true);
+        }
+    </script>
+
+</body>
+</html>
